@@ -285,7 +285,7 @@ window.portfolioData = {
     { id: 'g1', src: 'assets/images/SIET duo.jpeg', caption: 'TFUG 2026 — Photography after hands-on session', category: 'Hackathon' },
     { id: 'g2', src: 'assets/images/SIET group.jpeg', caption: 'Photography after hackathon', category: 'Hackathon' },
     { id: 'g3', src: 'assets/images/vibe-coding finalist.jpeg', caption: 'Won 4th place in Vibe-Coding Hackathon', category: 'Hackathon' },
-    { id: 'g4', src: 'assets/images/SIET single.jpeg', caption: 'Experiencing new tech at SIET by GDG Prayagraj', category: 'Community' },
+    { id: 'g4', src: 'assets/images/siet-single.jpeg', caption: 'Experiencing new tech at SIET by GDG Prayagraj', category: 'Community' },
     { id: 'g5', src: 'assets/images/devfest.jpeg', caption: 'Devfest Prayagraj 2025 — Attended at United University', category: 'Workshop' },
     { id: 'g6', src: 'assets/images/mnnit.jpeg', caption: 'AWS Student Community Day — Organized by MNNIT Allahabad from Amazon', category: 'Workshop' },
     { id: 'g7', src: 'assets/images/first sem end.jpeg', caption: 'First year Friends at University', category: 'University' },
