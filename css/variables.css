@@ -1,0 +1,71 @@
+:root {
+  /* Colors */
+  --bg: #0C0A09;
+  --bg-2: #141210;
+  --bg-3: #1C1916;
+  --border: #2A2420;
+  --border-hi: #3D3530;
+  --text-1: #F5F0EB;
+  --text-2: #9B8E84;
+  --text-3: #5C5248;
+  --accent: #D97706;
+  --accent-hi: #F59E0B;
+  --accent-dim: rgba(217, 119, 6, 0.10);
+  --success: #22C55E;
+  --error: #EF4444;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.72rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+
+  /* Spacing */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-10: 2.5rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --s-20: 5rem;
+  --s-24: 6rem;
+  --s-32: 8rem;
+
+  /* Radius */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --r-xl: 14px;
+  --r-full: 9999px;
+
+  /* Transitions */
+  --t-fast: 140ms ease;
+  --t-base: 240ms ease;
+  --t-slow: 380ms ease;
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-overlay: 300;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(12, 10, 9, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(12, 10, 9, 0.4), 0 2px 4px -1px rgba(12, 10, 9, 0.24);
+  --shadow-accent: 0 4px 14px 0 rgba(217, 119, 6, 0.39);
+}

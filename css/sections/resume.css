@@ -1,0 +1,50 @@
+/* resume.css */
+.resume {
+  background: var(--bg-3);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-strip {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+
+.resume-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--text-1);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-top: 0.75rem;
+}
+
+.resume-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-size: var(--text-sm);
+  flex-wrap: wrap;
+}
+
+.resume-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+  .resume-strip {
+    grid-template-columns: 1fr;
+  }
+  .resume-right {
+    flex-direction: row;
+  }
+}

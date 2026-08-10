@@ -1,0 +1,128 @@
+/* testimonials.css */
+.testimonials {
+  background: var(--bg-2);
+}
+
+.testimonials-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem 4rem;
+}
+
+.testimonials-row {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.testi-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.testi-relation {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.testi-quote {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--text-1);
+  line-height: 1.8;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testi-quote::before {
+  content: open-quote;
+  color: var(--accent);
+  font-size: 1.5em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 0.15em;
+}
+
+.testi-quote::after {
+  content: close-quote;
+  color: var(--accent);
+  font-size: 1.5em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-left: 0.15em;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-top: auto;
+}
+
+.testi-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.testi-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.testi-avatar-fallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.testi-name {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.testi-role {
+  font-size: var(--text-xs);
+  color: var(--text-3);
+}
+
+.testi-source {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--text-xs);
+  color: var(--text-3);
+  margin-top: 0.25rem;
+}
+
+.testi-source svg {
+  color: #0A66C2;
+}
+
+@media (max-width: 900px) {
+  .testimonials-row {
+    grid-template-columns: 1fr;
+  }
+}
