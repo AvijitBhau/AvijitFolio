@@ -29,6 +29,7 @@
 
 .gallery-item img {
   width: 100%;
+  min-height: 14rem;
   height: auto;
   display: block;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);

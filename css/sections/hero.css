@@ -226,7 +226,7 @@
   .hero-body {
     grid-template-columns: 1fr;
   }
-  .hero-right {
+  .hero-scroll-hint {
     display: none;
   }
 }

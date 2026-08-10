@@ -17,8 +17,10 @@ window.PortfolioRenderer = (function () {
   var FB   = "<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z'/></svg>";
   var ORC  = "<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><line x1='12' y1='8' x2='12' y2='16'/><line x1='8' y1='12' x2='16' y2='12'/></svg>";
 
+  var EM   = "<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='14' rx='2' ry='2'/><polyline points='3 7 12 13 21 7'/></svg>";
+
   var SOCIAL_ICONS = {
-    linkedin: LI, github: GH, orcid: ORC,
+    linkedin: LI, github: GH, orcid: ORC, email: EM,
     youtube: YT, twitter: TW, instagram: IG, facebook: FB
   };
 

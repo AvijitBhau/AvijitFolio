@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBurger = document.getElementById('nav-burger');
   const navDrawer = document.getElementById('nav-drawer');
   const drawerClose = document.getElementById('drawer-close');
-  
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       siteNav?.classList.add('scrolled');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, observerOpts);
-  
+
   sections.forEach(sec => navObserver.observe(sec));
 
   // 4. Scroll reveal
@@ -129,19 +129,23 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.initGallery) window.initGallery();
 
   // 8. Contact form
-  const contactForm = document.getElementById('contact-form'); // Assuming it's wrapped in a form, or we can just bind to submit btn
-  const btnSubmit = document.getElementById('form-submit');
+  // 8. Contact form
+  const contactForm = document.getElementById('contact-form');
   const inputName = document.getElementById('form-name');
   const inputEmail = document.getElementById('form-email');
   const inputMessage = document.getElementById('form-message');
+  const inputSubject = document.getElementById('form-subject');
+  const btnSubmit = document.getElementById('form-submit');
   const formSuccess = document.getElementById('form-success');
 
-  btnSubmit?.addEventListener('click', (e) => {
+  contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     let isValid = true;
-    
+
     [inputName, inputEmail, inputMessage].forEach(input => {
       if (!input) return;
+
       if (!input.value.trim()) {
         input.style.borderColor = '#EF4444';
         isValid = false;
@@ -150,21 +154,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    if (isValid) {
-      if (formSuccess) {
-        formSuccess.removeAttribute('hidden');
-        setTimeout(() => {
-          formSuccess.setAttribute('hidden', 'true');
-        }, 5000);
-      }
-      [inputName, inputEmail, inputMessage].forEach(input => {
-        if (input) input.value = '';
+    if (!isValid) return;
+
+    const originalText = btnSubmit?.textContent;
+
+    if (btnSubmit) {
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'Sending...';
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          Accept: 'application/json'
+        }
       });
-      const inputSubject = document.getElementById('form-subject');
-      if (inputSubject) inputSubject.value = '';
+
+      if (response.ok) {
+        contactForm.reset();
+
+        if (formSuccess) {
+          formSuccess.removeAttribute('hidden');
+
+          setTimeout(() => {
+            formSuccess.setAttribute('hidden', 'true');
+          }, 5000);
+        }
+      } else {
+        throw new Error('Form submission failed.');
+      }
+
+    } catch (error) {
+      alert('Sorry, your message could not be sent. Please try again or email me directly.');
+    } finally {
+      if (btnSubmit) {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = originalText || 'Send Message';
+      }
     }
   });
-
   // 9. Back to top
   const backToTop = document.getElementById('back-to-top');
   window.addEventListener('scroll', () => {

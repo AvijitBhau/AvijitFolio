@@ -23,6 +23,7 @@
   background: var(--accent-hi);
   border-color: var(--accent-hi);
   transform: translateY(-1px);
+  color: #0C0A09;
 }
 
 .btn-primary:active {
