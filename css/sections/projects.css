@@ -192,7 +192,7 @@
 }
 
 @media (max-width: 768px) {
-  .feat-strip {
+  .feat-strip, .feat-strip.flip {
     grid-template-columns: 1fr;
     min-height: auto;
   }

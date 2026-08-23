@@ -24,8 +24,10 @@ window.initNav = function() {
     hamburger.setAttribute('aria-expanded', isActive);
     
     if (isActive) {
+      document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden'; // lock body scroll
     } else {
+      document.documentElement.style.overflow = '';
       document.body.style.overflow = '';
     }
   }
