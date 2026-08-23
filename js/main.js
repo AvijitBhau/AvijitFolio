@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBurger = document.getElementById('nav-burger');
   const navDrawer = document.getElementById('nav-drawer');
   const drawerClose = document.getElementById('drawer-close');
+  let isScrollLocked = false;
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -39,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     navDrawer?.classList.remove('is-open');
     navBurger?.setAttribute('aria-expanded', 'false');
     navDrawer?.setAttribute('aria-hidden', 'true');
+    if (isScrollLocked) {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      isScrollLocked = false;
+    }
   }
 
   navBurger?.addEventListener('click', () => {
@@ -46,6 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     navDrawer?.classList.toggle('is-open');
     navBurger.setAttribute('aria-expanded', isOpen);
     navDrawer?.setAttribute('aria-hidden', !isOpen);
+
+    if (isOpen) {
+      isScrollLocked = true;
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    } else {
+      closeNav();
+    }
   });
 
   drawerClose?.addEventListener('click', closeNav);
