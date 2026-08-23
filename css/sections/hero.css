@@ -229,4 +229,7 @@
   .hero-scroll-hint {
     display: none;
   }
+  .hero-roles {
+    height: 2rem;
+  }
 }
