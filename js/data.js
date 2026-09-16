@@ -292,8 +292,8 @@ window.portfolioData = {
     { id: 'g8', src: 'assets/images/fresher.jpeg', caption: 'Freshers for us', category: 'Community' }
   ],
   resume: {
-    viewUrl: './assets/files/AA Resume Frontend-Dev.pdf',
-    downloadUrl: './assets/files/AA Resume Frontend-Dev.pdf',
+    viewUrl: './assets/files/AA Professional Resume.pdf',
+    downloadUrl: './assets/files/AA Professional Resume.pdf',
     highlights: [
       { number: '1+', label: 'Years Learning & Building' },
       { number: '6+', label: 'Projects Completed' },
